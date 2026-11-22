@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f2a43;
+  --color-secondary: #006b5f;
+  --color-surface: #f9f9ff;
+  --color-container: #e7eeff;
+  --color-ink: #111c2d;
+  --font-heading: "Newsreader", serif;
+  --font-sans: "Work Sans", system-ui, sans-serif;
+}
+
+body { @apply bg-surface text-ink font-sans; }
+h1, h2, h3 { @apply font-heading text-primary; }
