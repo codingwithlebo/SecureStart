@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-surface" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>SecureStart Compliance</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error": "#ffffff", "surface-container": "#e7eeff", "on-tertiary": "#ffffff", "on-error-container": "#93000a", "surface-dim": "#cfdaf2", "surface-variant": "#d8e3fb", "surface-container-high": "#dee8ff", "secondary-fixed": "#81f6e3", "surface-container-low": "#f0f3ff", "on-primary-fixed-variant": "#304963", "tertiary": "#001626", "outline-variant": "#c3c6ce", "on-tertiary-container": "#2f96db", "on-surface-variant": "#43474d", "inverse-surface": "#263143", "secondary-container": "#7ef3e0", "on-tertiary-fixed-variant": "#004b73", "inverse-on-surface": "#ecf1ff", "tertiary-container": "#002b45", "on-tertiary-fixed": "#001d31", "error-container": "#ffdad6", "error": "#ba1a1a", "surface": "#f9f9ff", "outline": "#74777e", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#b0c9e9", "surface-container-highest": "#d8e3fb", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#005047", "secondary-fixed-dim": "#63dac7", "primary-fixed": "#d0e4ff", "primary": "#001529", "background": "#f9f9ff", "on-primary-fixed": "#001d35", "on-secondary-container": "#006f63", "on-surface": "#111c2d", "tertiary-fixed": "#cce5ff", "on-secondary-fixed": "#00201c", "tertiary-fixed-dim": "#93ccff", "primary-container": "#0f2a43", "on-secondary": "#ffffff", "surface-bright": "#f9f9ff", "surface-tint": "#48607c", "on-primary-container": "#7992b0", "on-background": "#111c2d", "inverse-primary": "#b0c9e9", "secondary": "#006b5f" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "margin": "2rem", "space-md": "1rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xl": "2rem", "space-xs": "0.25rem" }, "fontFamily": { "body-lg": ["Work Sans"], "headline-sm": ["Work Sans"], "headline-md": ["Newsreader"], "headline-lg": ["Newsreader"], "display-lg": ["Newsreader"], "body-md": ["Work Sans"], "label-sm": ["Work Sans"], "body-sm": ["Work Sans"], "label-md": ["Work Sans"], "headline-lg-mobile": ["Newsreader"], "display-lg-mobile": ["Newsreader"] }, "fontSize": { "body-lg": ["1.125rem", {"lineHeight": "1.75rem", "fontWeight": "400"}], "headline-sm": ["1.125rem", {"lineHeight": "1.625rem", "fontWeight": "600"}], "headline-md": ["1.5rem", {"lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["2rem", {"lineHeight": "2.5rem", "letterSpacing": "-0.015em", "fontWeight": "600"}], "display-lg": ["2.75rem", {"lineHeight": "3.25rem", "letterSpacing": "-0.02em", "fontWeight": "600"}], "body-md": ["1rem", {"lineHeight": "1.5rem", "fontWeight": "400"}], "label-sm": ["0.75rem", {"lineHeight": "1rem", "letterSpacing": "0.025em", "fontWeight": "600"}], "body-sm": ["0.875rem", {"lineHeight": "1.375rem", "fontWeight": "400"}], "label-md": ["0.875rem", {"lineHeight": "1.25rem", "fontWeight": "500"}], "headline-lg-mobile": ["1.625rem", {"lineHeight": "2.125rem", "letterSpacing": "-0.01em", "fontWeight": "600"}], "display-lg-mobile": ["2rem", {"lineHeight": "2.5rem", "letterSpacing": "-0.015em", "fontWeight": "600"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,42,67,0.06)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm h-12"><div class="flex items-center gap-space-sm min-w-0"><img alt="SecureStart Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj5GViK0QID1Ru9RKiugtGpTZe08WM1OcImNhzrwR4iytTltGb2NquzhpjAiJWCf_i5dKmvGJsiWHUnWafJ2OWHQ9bt_tKy3mg3jSSGfr9GinnJesSu_W1n0Mn15v0UK9yCmJDfOAKvhwcTmkcuS-qxdKWK2tA3y_Gc6cIScozD1dnpyv-hjKfmwdfY8a5YWSvUdwVAvyj2-lZwsjxerDRBZK-cQetD5bSFO5GYX8"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none truncate">SecureStart</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight tracking-wider uppercase font-semibold">Findings</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Alerts &amp; Notifications" class="w-11 h-11 flex items-center justify-center text-primary-container hover:bg-surface-container rounded-full transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface"></span></button><button aria-label="Firm Menu" class="w-11 h-11 flex items-center justify-center text-primary-container hover:bg-surface-container rounded-full transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="pl-space-xs flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh-J_8qWuBzcQEWkKXN6z1EnbZh0lpCK822jrQrdw0Bi8ZYdrbLTtej_5eKZZC466nJL1V3cL87Y6AEqsQPjtCjuPpCtFinMAjZWhciUqas6OCU0QdNhCKT4uD_WykQTi0OQKq_kmdkJOhCIKTuSgsK3mITAl9j_0SmGhjW99g2g9EUvJu_2HqF2aupshgUZScghfB83oxOqgyt7UTrxGtNP9cPr4FSI45mrkg_2A"/></div></div></div><div class="flex items-center justify-between bg-surface-container-low px-space-sm py-1 rounded-lg"><button aria-label="Switch Firm Context" class="flex items-center gap-1.5 text-left min-w-0 flex-1 py-0.5"><span class="material-symbols-outlined text-[16px] text-primary flex-shrink-0">domain</span><span class="font-label-md text-label-md text-primary font-semibold truncate">Mokoena &amp; Partners Accountants</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant flex-shrink-0">expand_more</span></button><div class="flex-shrink-0 pl-space-xs"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-[11px] font-semibold tracking-wide uppercase"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>POPIA Reg</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-gutter-mobile pt-28 pb-24 bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Header Zone -->
+<section class="flex flex-col gap-1 mb-4 pt-1">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm tracking-wide uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        Statutory Register
+      </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+        POPIA Audit 2024.2
+      </span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-1 leading-tight tracking-tight">
+      Findings &amp; Remediation Backlog
+    </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+      Active cybersecurity vulnerabilities and statutory POPIA gaps identified for Mokoena &amp; Partners Accountants.
+    </p>
+<!-- Visual Executive Summary Strip -->
+<div class="mt-3 p-3.5 rounded-full bg-surface-container-low shadow-sm flex items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="relative w-11 h-11 flex-shrink-0 flex items-center justify-center">
+<svg class="w-11 h-11 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="72, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-label-sm text-primary font-bold">72%</span>
+</div>
+<div class="min-w-0 flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold truncate">Target Closure Pace</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">8 of 11 on statutory track</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0 pl-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-error font-semibold bg-error-container/60 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">alarm</span> 1 Critical
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Due in 4 days</span>
+</div>
+</div>
+</section>
+<!-- Search & Filter Controls -->
+<section class="flex flex-col gap-3 mb-4">
+<!-- Search Bar -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px] pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-9 rounded-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-outline shadow-sm focus:outline-none focus:bg-surface-container-low transition-colors" id="searchFindingsInput" placeholder="Search findings by keyword, system, or section..." type="search"/>
+<button aria-label="Clear Search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-primary p-0.5 rounded-full" id="clearSearchBtn">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Priority Pills (Horizontal Scroll) -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-nowrap">
+<button class="priority-filter-btn px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary transition-all flex items-center gap-1 shadow-sm" data-priority="all">
+<span>All</span>
+<span class="px-1.5 py-0.2 rounded-full bg-white/20 text-[11px] leading-tight font-medium">11</span>
+</button>
+<button class="priority-filter-btn px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-error hover:bg-error-container/40 transition-all flex items-center gap-1.5 shadow-sm" data-priority="critical">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Critical</span>
+<span class="px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container text-[11px] leading-tight font-medium">1</span>
+</button>
+<button class="priority-filter-btn px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-[#ea580c] hover:bg-surface-container transition-all flex items-center gap-1.5 shadow-sm" data-priority="high">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ea580c]"></span>
+<span>High</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant text-[11px] leading-tight font-medium">3</span>
+</button>
+<button class="priority-filter-btn px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-[#d97706] hover:bg-surface-container transition-all flex items-center gap-1.5 shadow-sm" data-priority="medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#d97706]"></span>
+<span>Medium</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant text-[11px] leading-tight font-medium">5</span>
+</button>
+<button class="priority-filter-btn px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-all flex items-center gap-1.5 shadow-sm" data-priority="low">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>Low</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant text-[11px] leading-tight font-medium">2</span>
+</button>
+</div>
+<!-- Status Tabs -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-full overflow-x-auto no-scrollbar">
+<button class="status-tab flex-1 min-w-[76px] py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center bg-surface-container-lowest text-primary shadow-sm font-semibold transition-colors" data-status="all">
+        All Active
+      </button>
+<button class="status-tab flex-1 min-w-[64px] py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center text-on-surface-variant hover:text-primary transition-colors" data-status="open">
+        Open
+      </button>
+<button class="status-tab flex-1 min-w-[84px] py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center text-on-surface-variant hover:text-primary transition-colors" data-status="in-progress">
+        In Progress
+      </button>
+<button class="status-tab flex-1 min-w-[74px] py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center text-on-surface-variant hover:text-primary transition-colors" data-status="resolved">
+        Resolved
+      </button>
+<button class="status-tab flex-1 min-w-[94px] py-1.5 px-2 rounded-full font-label-sm text-label-sm text-center text-on-surface-variant hover:text-primary transition-colors" data-status="accepted-risk">
+        Accepted Risk
+      </button>
+</div>
+</section>
+<!-- Findings Cards List -->
+<section class="flex flex-col gap-3" id="findingsList">
+<!-- Finding 1: Critical -->
+<article class="finding-card bg-surface-container-lowest rounded-full p-4 shadow-sm flex flex-col gap-3 transition-transform active:scale-[0.99]" data-keywords="mfa multi-factor email microsoft 365 popia 19 exchange" data-priority="critical" data-status="in-progress">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-1.5">
+<!-- Dual-badge Priority: Red with filled dot -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#fee2e2] text-[#dc2626] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+            Critical
+          </span>
+<!-- Dual-badge Status: Blue with filled dot -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#e0f2fe] text-[#0284c7] font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#0284c7]"></span>
+            In Progress
+          </span>
+<!-- Statutory Scope Tag -->
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">gavel</span>
+            POPIA Sec 19
+          </span>
+</div>
+<button aria-label="Finding options" class="text-outline hover:text-primary p-1 rounded-full">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-sm text-headline-sm text-primary leading-snug">
+          Multi-factor authentication is not enabled on email accounts
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-1.5 pt-0.5">
+<span class="material-symbols-outlined text-[16px] text-error flex-shrink-0 mt-0.5">mail</span>
+<span>Affected: <strong>14 staff mailboxes</strong> on Microsoft 365 Exchange without secondary enforcement.</span>
+</p>
+</div>
+<!-- Action & Meta Footer -->
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-2 mt-0.5">
+<div class="flex items-center gap-2 min-w-0">
+<img class="w-7 h-7 rounded-full object-cover flex-shrink-0 bg-surface-dim" data-alt="Professional portrait photograph of Thabo Sithole, a South African male IT Support Specialist in a tailored navy blazer and clean collared shirt, studio ambient lighting, warm confident smile, corporate headshot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5oZncy1zBMhpSzYDUKdU-2lY0ff4GrMTFq-CV3DfD6nLr55u-gCTce_p9XI8NpeKoParJT8fX04X1XKN6PbQbcrz6wcpwjUeQ-khtUU8fl_9xkdWJaNLaGRR2jTxSJTLLHZcscvwOKmyziH6xEzHp_DCurTbLtar1DtqKIk8NouSXVYg8MQPNh8ogAWsGZgmrgbv_nJutMDrqdkZaox1aVn4kJBwjfbWkKpYfoLw"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-semibold truncate">Thabo Sithole</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">IT Support Partner</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-error font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+            Due 28 Oct 2024
+          </span>
+<span class="font-label-sm text-[11px] text-error font-medium">Expiring Soon</span>
+</div>
+</div>
+</article>
+<!-- Finding 2: High -->
+<article class="finding-card bg-surface-container-lowest rounded-full p-4 shadow-sm flex flex-col gap-3 transition-transform active:scale-[0.99]" data-keywords="section 21 operator cloudbooks vendor contract legal popia" data-priority="high" data-status="open">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-1.5">
+<!-- Dual-badge Priority: Orange with filled dot -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#ffedd5] text-[#ea580c] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ea580c]"></span>
+            High
+          </span>
+<!-- Dual-badge Status: Open (Grey) -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+            Open
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">contract</span>
+            POPIA Sec 21
+          </span>
+</div>
+<button aria-label="Finding options" class="text-outline hover:text-primary p-1 rounded-full">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-sm text-headline-sm text-primary leading-snug">
+          Lack of signed Section 21 Operator Agreement with cloud bookkeeping provider
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-1.5 pt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary flex-shrink-0 mt-0.5">cloud_done</span>
+<span>Third-party vendor <strong>'CloudBooks SA'</strong> processes confidential client financial statements and PAYE logs.</span>
+</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-2 mt-0.5">
+<div class="flex items-center gap-2 min-w-0">
+<img class="w-7 h-7 rounded-full object-cover flex-shrink-0 bg-surface-dim" data-alt="Editorial portrait photograph of Nthabiseng Mokoena, Senior Legal &amp; Compliance Partner, South African female in sharp formal dark business attire, gentle direct gaze, natural office soft morning illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP1lOSWlJwpg6aos44lx_D2oVTMzONLb6hBhb0Y_Yqiz77yjZIP5KLDbdVHj_PReNSTJmY475MYK7AaRf5aXCslRyqHowPPH9wmB9Q_A0Y5AgHr5hF6kVZmocPeIzdg0YHUajuR2DL6y0eb5JiNRNgUftSnbkzcOIZ6xfMVT22iMibP93_ZniJb91ZCj2sDiY9K0n81QrQ7XtPVYBhaD0LHFdWI9IBxqaDLunmNkk"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-semibold truncate">Nthabiseng Mokoena</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Managing Partner</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">calendar_today</span>
+            Due 05 Nov 2024
+          </span>
+<span class="font-label-sm text-[11px] text-secondary font-medium">Drafting Notice</span>
+</div>
+</div>
+</article>
+<!-- Finding 3: High -->
+<article class="finding-card bg-surface-container-lowest rounded-full p-4 shadow-sm flex flex-col gap-3 transition-transform active:scale-[0.99]" data-keywords="bitlocker encryption laptop physical hardware device workstation" data-priority="high" data-status="in-progress">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#ffedd5] text-[#ea580c] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ea580c]"></span>
+            High
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#e0f2fe] text-[#0284c7] font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#0284c7]"></span>
+            In Progress
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">laptop_mac</span>
+            Physical / Device
+          </span>
+</div>
+<button aria-label="Finding options" class="text-outline hover:text-primary p-1 rounded-full">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-sm text-headline-sm text-primary leading-snug">
+          Workstations lack automated full-disk encryption (BitLocker)
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-1.5 pt-0.5">
+<span class="material-symbols-outlined text-[16px] text-[#ea580c] flex-shrink-0 mt-0.5">key_off</span>
+<span><strong>6 partner laptops</strong> taken out of office premises lack verified TPM disk encryption policies.</span>
+</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-2 mt-0.5">
+<div class="flex items-center gap-2 min-w-0">
+<img class="w-7 h-7 rounded-full object-cover flex-shrink-0 bg-surface-dim" data-alt="Candid headshot photo of an African IT engineer Thabo Sithole working at modern executive accounting desk with monitor displays in background, neutral navy and slate corporate palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAebdRk83jOLLbw_4Qgo_wJxetUco1iretDTUNdAPw-xsi1rup_6SkeDfieDWE2OI1BfhIXal6p9Pn3NI6gyLyZaO6vaA5O43A7Yndz1wpzDedxLSOhM_tJFG84yt-MQHgixZWsW_k8VyUFNgKECsr2Iyy05deMxsQ6evLkw1X8B5_e_fx84ygog68fEwJUjL1J8DAiYi0SlRNZNemp29pumAQeUDmYVBxp7yGP9H8"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-semibold truncate">Thabo Sithole</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">IT Support Partner</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">calendar_today</span>
+            Due 02 Nov 2024
+          </span>
+<span class="font-label-sm text-[11px] text-secondary font-medium">3/6 Enrolled</span>
+</div>
+</div>
+</article>
+<!-- Finding 4: Medium -->
+<article class="finding-card bg-surface-container-lowest rounded-full p-4 shadow-sm flex flex-col gap-3 transition-transform active:scale-[0.99]" data-keywords="training privacy governance awareness employee staff education" data-priority="medium" data-status="open">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-1.5">
+<!-- Dual-badge Priority: Amber with filled dot -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#fef3c7] text-[#d97706] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#d97706]"></span>
+            Medium
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+            Open
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">school</span>
+            Governance
+          </span>
+</div>
+<button aria-label="Finding options" class="text-outline hover:text-primary p-1 rounded-full">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-sm text-headline-sm text-primary leading-snug">
+          Annual employee POPIA privacy awareness training overdue
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-1.5 pt-0.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant flex-shrink-0 mt-0.5">groups</span>
+<span><strong>8 staff members</strong> require an annual refresher course on handling sensitive client tax records and IRP5s.</span>
+</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-2 mt-0.5">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[15px]">badge</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-semibold truncate">Compliance Officer</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Internal Audit Desk</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">calendar_today</span>
+            Due 15 Nov 2024
+          </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-medium">Curriculum Pending</span>
+</div>
+</div>
+</article>
+<!-- Finding 5: Accepted Risk -->
+<article class="finding-card bg-surface-container-lowest rounded-full p-4 shadow-sm flex flex-col gap-3 transition-transform active:scale-[0.99]" data-keywords="physical archive audit storeroom cctv security records low" data-priority="low" data-status="accepted-risk">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-wrap items-center gap-1.5">
+<!-- Dual-badge Priority: Slate with filled dot -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#f1f5f9] text-[#475569] font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#94a3b8]"></span>
+            Low
+          </span>
+<!-- Dual-badge Status: Accepted Risk (Purple) -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#f3e8ff] text-[#9333ea] font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#9333ea]"></span>
+            Accepted Risk
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+            Physical Security
+          </span>
+</div>
+<button aria-label="Finding options" class="text-outline hover:text-primary p-1 rounded-full">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-sm text-headline-sm text-primary leading-snug">
+          Archived physical audit files stored in secondary lockable storeroom
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-1.5 pt-0.5">
+<span class="material-symbols-outlined text-[16px] text-[#9333ea] flex-shrink-0 mt-0.5">videocam</span>
+<span>Risk evaluated by Managing Director; supplementary CCTV recording and dual-custody log book activated in lieu of fire vault rebuild.</span>
+</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-2 mt-0.5">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[18px] text-[#9333ea]">verified</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-semibold truncate">Governance Board Signed</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Review due 2025 Q2</span>
+</div>
+</div>
+<div class="flex flex-col items-end flex-shrink-0">
+<span class="font-label-sm text-[11px] text-on-surface-variant font-medium">Exemption Registered</span>
+<span class="font-label-sm text-[11px] text-secondary font-semibold">Ref: EX-409</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Empty State (Hidden initially, triggered via search/filter) -->
+<div class="hidden flex-col items-center justify-center p-8 text-center bg-surface-container-lowest rounded-full shadow-sm mt-2" id="noFindingsState">
+<div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined text-[30px] text-secondary">task_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">No Matching Findings Found</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-xs">
+      Try relaxing your search terms or selecting another priority filter to inspect active remediation items.
+    </p>
+<button class="mt-4 px-4 py-2 rounded-xl bg-surface-container-high text-primary font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors" id="resetFiltersBtn">
+      Reset All Filters
+    </button>
+</div>
+<!-- Statutory Remediation Timeline Insight Card -->
+<section class="mt-6 bg-surface-container-low rounded-full p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment_turned_in</span>
+<h3 class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Statutory POPIA Sign-Off</h3>
+</div>
+<span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">2024 Audit Ready</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Resolution of the Critical MFA gap and Section 21 Operator Agreement elevates Mokoena &amp; Partners to verified POPIA Section 19 compliance ahead of South African Regulatory reporting.
+    </p>
+</section>
+<!-- Floating / Sticky Quick Action Button -->
+<div class="sticky bottom-4 z-30 flex justify-end mt-6 pointer-events-none">
+<button aria-label="Log New Statutory Finding" class="pointer-events-auto h-12 px-5 rounded-full bg-secondary text-on-secondary shadow-lg hover:bg-on-secondary-container active:scale-95 transition-all flex items-center gap-2 font-label-md text-label-md font-semibold shadow-primary/10" id="logFindingBtn">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Log New Finding</span>
+</button>
+</div>
+</div>
+<script>
+  (function initRemediationTracker() {
+    const searchInput = document.getElementById('searchFindingsInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const priorityButtons = document.querySelectorAll('.priority-filter-btn');
+    const statusTabs = document.querySelectorAll('.status-tab');
+    const cards = document.querySelectorAll('.finding-card');
+    const emptyState = document.getElementById('noFindingsState');
+    const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+    const logBtn = document.getElementById('logFindingBtn');
+
+    let currentPriority = 'all';
+    let currentStatus = 'all';
+    let searchQuery = '';
+
+    function filterFindings() {
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cardPriority = card.getAttribute('data-priority');
+        const cardStatus = card.getAttribute('data-status');
+        const cardKeywords = card.getAttribute('data-keywords') || '';
+        const cardText = card.innerText.toLowerCase();
+
+        const matchesPriority = currentPriority === 'all' || cardPriority === currentPriority;
+        const matchesStatus = currentStatus === 'all' || cardStatus === currentStatus;
+        const matchesSearch = !searchQuery || cardText.includes(searchQuery) || cardKeywords.includes(searchQuery);
+
+        if (matchesPriority && matchesStatus && matchesSearch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+      }
+    }
+
+    // Search Input Events
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      if (searchQuery.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+      filterFindings();
+    });
+
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      clearBtn.classList.add('hidden');
+      searchInput.focus();
+      filterFindings();
+    });
+
+    // Priority Pill Toggles
+    priorityButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        priorityButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container-lowest');
+        });
+        btn.classList.remove('bg-surface-container-lowest');
+        btn.classList.add('bg-primary', 'text-on-primary');
+
+        currentPriority = btn.getAttribute('data-priority');
+        filterFindings();
+      });
+    });
+
+    // Status Tab Toggles
+    statusTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        statusTabs.forEach(t => {
+          t.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        tab.classList.remove('text-on-surface-variant');
+
+        currentStatus = tab.getAttribute('data-status');
+        filterFindings();
+      });
+    });
+
+    // Reset Filters
+    if (resetFiltersBtn) {
+      resetFiltersBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        clearBtn.classList.add('hidden');
+
+        priorityButtons[0].click();
+        statusTabs[0].click();
+      });
+    }
+
+    // Quick Action Feedback
+    if (logBtn) {
+      logBtn.addEventListener('click', () => {
+        const originalText = logBtn.innerHTML;
+        logBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Opening Form...</span>';
+        setTimeout(() => {
+          logBtn.innerHTML = originalText;
+        }, 1200);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-4px_12px_rgba(15,42,67,0.06)]" data-active-classes="text-secondary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs max-w-md mx-auto"><a class="flex-1 h-full min-h-[48px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">shield</span><span class="font-label-sm text-label-sm">Dashboard</span></a><a class="flex-1 h-full min-h-[48px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="assessment" href="#"><span class="material-symbols-outlined text-[22px]">fact_check</span><span class="font-label-sm text-label-sm">Assessment</span></a><a aria-current="page" class="flex-1 h-full min-h-[48px] flex flex-col items-center justify-center gap-0.5 transition-colors text-secondary font-semibold" data-path="findings" href="#"><span class="material-symbols-outlined text-[22px]">warning</span><span class="font-label-sm text-label-sm">Findings</span></a><a class="flex-1 h-full min-h-[48px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="firm-and-popia-info" href="#"><span class="material-symbols-outlined text-[22px]">corporate_fare</span><span class="font-label-sm text-label-sm">Firm &amp; POPIA</span></a></div></nav></body></html>
