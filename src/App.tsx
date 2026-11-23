@@ -5,7 +5,9 @@ import { Layout } from './components/Layout';
 import { Login } from './pages/Login';
 import { FirmSetup } from './pages/FirmSetup';
 import { Assessment } from './pages/Assessment';
-import { Dashboard, Findings, FirmSettings } from './pages/Pages';
+import { Findings } from './pages/Findings';
+import { FindingDetail } from './pages/FindingDetail';
+import { Dashboard, FirmSettings } from './pages/Pages';
 
 export default function App() {
   return (
@@ -18,6 +20,7 @@ export default function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/assessment" element={<Assessment />} />
             <Route path="/findings" element={<Findings />} />
+            <Route path="/findings/:id" element={<FindingDetail />} />
             <Route path="/firm" element={<FirmSettings />} />
           </Route>
         </Routes>
