@@ -4,7 +4,8 @@ import { RequireAuth } from './auth/RequireAuth';
 import { Layout } from './components/Layout';
 import { Login } from './pages/Login';
 import { FirmSetup } from './pages/FirmSetup';
-import { Assessment, Dashboard, Findings, FirmSettings } from './pages/Pages';
+import { Assessment } from './pages/Assessment';
+import { Dashboard, Findings, FirmSettings } from './pages/Pages';
 
 export default function App() {
   return (
