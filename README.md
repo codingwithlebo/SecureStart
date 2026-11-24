@@ -1,52 +1,64 @@
 # SecureStart
-# SecureStart
 
-**Helps South African small professional firms find their cybersecurity and POPIA gaps, turn each gap into a tracked fix, and show exactly how their security is improving.**
+**SecureStart helps small South African professional firms find their cybersecurity and POPIA gaps, turn each gap into a tracked fix, and show how their security is improving.**
 
 | | |
 |---|---|
-| **Live app** | _add link after deploy (Tue 24 Nov)_ |
-| **Stitch designs** | [Open the Stitch project](https://stitch.google.com/preview/6779133449834683870) (exports in [docs/designs/](./docs/designs/)) |
-| **Loom pitch and demo** | _add link (Wed 25 Nov)_ |
-| **Test logins** | _add owner and administrator accounts after deploy_ |
+| **Live app** | https://secure-start-ten.vercel.app/ |
+| **Stitch designs** | [Stitch project](https://stitch.google.com/preview/6779133449834683870) (exports in [docs/designs/](./docs/designs/)) |
+| **Loom pitch and demo** | _TODO: add Loom link_ |
+| **Test logins** | Owner: _TODO email_ / _TODO password_ · Administrator: _TODO email_ / _TODO password_ |
 
 ## The problem
 
-Small accounting, law and medical practices hold client personal information but have no security team. Under POPIA every security compromise must be reported, the Information Regulator is moving into active enforcement, and most firms track their security in a spreadsheet, if at all. Full detail and sources: [BUSINESS.md](./BUSINESS.md).
+Accounting, law and medical practices hold client personal information but have no security team. Under POPIA every security compromise must be reported, the Information Regulator is moving into enforcement, and most firms track their security in a spreadsheet, if at all. Full business case and sources: [BUSINESS.md](./BUSINESS.md).
 
-## What SecureStart does
+## What it does
 
-A firm answers a guided assessment built on CIS Controls v8 (Implementation Group 1) and mapped to POPIA security requirements. Each "no" or "partly" answer becomes a prioritised risk with an owner, a due date and a status. A dashboard shows a transparent score and how it improves as risks are resolved.
+A firm answers a guided assessment of 30 questions based on the basic safeguards in CIS Controls v8 and mapped to POPIA security duties. Every "No" or "Partly" answer becomes a prioritised finding with an owner, due date and status. A dashboard shows a transparent score and how it improves as findings are fixed.
 
-SecureStart does not scan systems or run automated penetration tests, and it does not give legal advice.
+SecureStart is a risk assessment and tracking tool. It does not scan systems, run penetration tests or give legal advice.
 
 ## Must features
 
-1. **Authentication and roles:** business owner and security administrator, with permissions enforced in the database.
-2. **Guided assessment:** questionnaire with transparent scoring.
-3. **Findings and remediation tracking:** risks created from assessment answers, tracked from open to resolved.
-4. **Risk dashboard:** score, top risks and progress over time.
+1. **Login and two roles:** business owner and security administrator, with permissions enforced in the database.
+2. **Guided assessment:** 30 questions in 8 categories, saved drafts, visible scoring formula.
+3. **Findings and remediation tracking:** created automatically from answers, with status, assignee, due date, notes and an activity log.
+4. **Risk dashboard:** score and change, open findings by priority, remediation progress, overdue count, score over time and top five risks.
+
+Also: firm setup for new owners, and firm settings where an owner edits firm details and adds a security administrator by email.
+
+## Roles and permissions
+
+| | Business owner | Security administrator |
+|---|---|---|
+| Run and submit assessments | Yes | Yes |
+| View findings, dashboard | Yes | Yes (firms they belong to) |
+| Change finding status and notes | Yes | Yes |
+| Change finding assignee and due date | No | Yes |
+| Edit firm details, add administrators | Yes | No |
+| See another firm's data | No | No |
+
+These rules are enforced by Postgres row-level security, column privileges and triggers, not only by the interface.
 
 ## Tech stack
 
-Planned stack, update if anything changes:
-
-- **Frontend:** React, TypeScript, Vite, Tailwind CSS
-- **Backend and database:** Supabase (hosted Postgres, Auth, row-level security policies)
-- **Testing:** Vitest and Testing Library
-- **CI:** GitHub Actions running lint, typecheck, tests and build on every pull request
-- **Hosting:** _add host after deploy_
+- **Front end:** React, TypeScript, Vite, Tailwind CSS, React Router
+- **Back end and database:** Supabase (hosted Postgres, Auth, row-level security, SQL functions)
+- **Testing:** Vitest (scoring, priority, finding generation and dashboard logic), SQL permission tests
+- **CI:** GitHub Actions runs lint, typecheck, tests and build on every pull request
+- **Hosting:** Vercel
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-  U[Owner / Security administrator] --> W[React + TypeScript web app]
-  W -->|Auth + queries| S[(Supabase: Postgres + Auth)]
-  S -->|Row-level security| S
+  U[Owner / Security administrator] --> W[React + TypeScript app on Vercel]
+  W -->|Auth, queries, RPC| S[(Supabase: Postgres + Auth)]
+  S -->|Row-level security, triggers, SQL functions| S
 ```
 
-Roles are stored in the database and every table is protected by row-level security policies, so permissions are enforced on the backend and not only in the interface.
+Key database functions: `create_organization`, `add_administrator` and `submit_assessment` (validates, scores, creates, reopens and auto-resolves findings, and locks the assessment). A trigger creates a profile at sign up and another logs every finding status change.
 
 ## Run it locally
 
@@ -54,9 +66,11 @@ Roles are stored in the database and every table is protected by row-level secur
 git clone https://github.com/codingwithlebo/SecureStart.git
 cd SecureStart
 npm install
-cp .env.example .env   # add your Supabase URL and anon key
+cp .env.example .env   # add your Supabase project URL and publishable (anon) key
 npm run dev
 ```
+
+Set up the database in a new Supabase project by running, in the SQL Editor and in this order: `supabase/migrations/20261123000000_init_schema.sql`, then `supabase/migrations/20261123000100_seed_questions.sql`. For testing, turn off **Confirm email** under Authentication.
 
 ## Run the tests
 
@@ -67,6 +81,8 @@ npm test
 npm run build
 ```
 
+Database permission tests: paste `supabase/tests/permissions.sql` into the Supabase SQL Editor and run it. It rolls back all test data, and "Success. No rows returned" means every rule passed.
+
 ## Documentation
 
 - [BUSINESS.md](./BUSINESS.md): problem, customer, solution, impact, business model, go-to-market, competition
@@ -76,12 +92,17 @@ npm run build
 
 ## Screenshots
 
-_Add desktop and mobile screenshots after the first deploy._
+_TODO: add desktop and mobile screenshots of the dashboard, assessment and findings._
 
 ## Known issues
 
-_List any open issues here before submission._
+- An administrator who belongs to several firms currently sees only their first firm; there is no firm switcher yet.
+- The members list shows names and roles, not email addresses.
+- Email confirmation is switched off for the demo so reviewers can sign up and log in without an inbox.
+- Database permission tests run manually in the SQL Editor and are not part of CI.
+- The Stitch exports for the first four screens are mobile only and use earlier wording than the final app.
+- The free Supabase plan pauses a project after a week of inactivity.
 
 ## Author
 
-Malebo Nkuna, [GitHub](https://github.com/codingwithlebo) · [LinkedIn](https://linkedin.com/in/malebo-n-b1b872376)
+Malebo Nkuna · [GitHub](https://github.com/codingwithlebo) · [LinkedIn](https://www.linkedin.com/in/malebo-n-b1b872376)
