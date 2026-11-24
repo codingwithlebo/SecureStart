@@ -7,7 +7,8 @@ import { FirmSetup } from './pages/FirmSetup';
 import { Assessment } from './pages/Assessment';
 import { Findings } from './pages/Findings';
 import { FindingDetail } from './pages/FindingDetail';
-import { Dashboard, FirmSettings } from './pages/Pages';
+import { Dashboard } from './pages/Dashboard';
+import { FirmSettings } from './pages/FirmSettings';
 
 export default function App() {
   return (
