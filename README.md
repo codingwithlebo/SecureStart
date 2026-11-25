@@ -7,7 +7,7 @@
 | **Live app** | https://secure-start-ten.vercel.app/ |
 | **Stitch designs** | [Stitch project](https://stitch.google.com/preview/6779133449834683870) (exports in [docs/designs/](./docs/designs/)) |
 | | **Loom pitch and demo** | https://www.loom.com/share/dd4568960d864e69ab6d9338d61bc319 |
-| **Test logins** | Owner: EMAIL / PASSWORD · Administrator: EMAIL / PASSWORD |
+| | **Test logins** | Owner: owner.demo@example.com / SecureStart-Demo1 · Administrator: admin.demo@example.com / SecureStart-Demo1 |
 | **Portfolio** | https://portfolio-zeta-lake-10.vercel.app/ ([repo](https://github.com/codingwithlebo/portfolio)) |
 | **Repo** | https://github.com/codingwithlebo/SecureStart |
 ## The problem
