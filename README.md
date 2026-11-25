@@ -92,8 +92,14 @@ Database permission tests: paste `supabase/tests/permissions.sql` into the Supab
 - [IMPLEMENTATION_PLAN.md](./IMPLEMENTATION_PLAN.md): build plan
 
 ## Screenshots
+| Dashboard | Findings |
+|---|---|
+| ![Dashboard](docs/screenshots/dashboard-desktop.png) | ![Findings](docs/screenshots/findings-desktop.png) |
 
-_TODO: add desktop and mobile screenshots of the dashboard, assessment and findings._
+| Assessment | Firm settings |
+|---|---|
+| ![Assessment](docs/screenshots/assessment-desktop.png) | ![Firm settings](docs/screenshots/firm-settings-desktop.png) |
+
 
 ## Known issues
 
