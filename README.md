@@ -94,11 +94,11 @@ Database permission tests: paste `supabase/tests/permissions.sql` into the Supab
 ## Screenshots
 | Dashboard | Findings |
 |---|---|
-| ![Dashboard](docs/screenshots/dashboard-desktop.png) | ![Findings](docs/screenshots/findings-desktop.png) |
+| ![Dashboard](docs/dashboard-desktop.png) | ![Findings](docs/findings-desktop.png) |
 
 | Assessment | Firm settings |
 |---|---|
-| ![Assessment](docs/screenshots/assessment-desktop.png) | ![Firm settings](docs/screenshots/firm-settings-desktop.png) |
+| ![Assessment](docs/assessment-desktop.png) | ![Firm settings](docs/firm-settings-desktop.png) |
 
 
 ## Known issues
