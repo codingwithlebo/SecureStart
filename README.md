@@ -6,9 +6,10 @@
 |---|---|
 | **Live app** | https://secure-start-ten.vercel.app/ |
 | **Stitch designs** | [Stitch project](https://stitch.google.com/preview/6779133449834683870) (exports in [docs/designs/](./docs/designs/)) |
-| **Loom pitch and demo** | _TODO: add Loom link_ |
-| **Test logins** | Owner: _TODO email_ / _TODO password_ · Administrator: _TODO email_ / _TODO password_ |
-
+| **Loom pitch and demo** | PASTE LOOM LINK |
+| **Test logins** | Owner: EMAIL / PASSWORD · Administrator: EMAIL / PASSWORD |
+| **Portfolio** | https://portfolio-zeta-lake-10.vercel.app/ ([repo](https://github.com/codingwithlebo/portfolio)) |
+| **Repo** | https://github.com/codingwithlebo/SecureStart |
 ## The problem
 
 Accounting, law and medical practices hold client personal information but have no security team. Under POPIA every security compromise must be reported, the Information Regulator is moving into enforcement, and most firms track their security in a spreadsheet, if at all. Full business case and sources: [BUSINESS.md](./BUSINESS.md).
